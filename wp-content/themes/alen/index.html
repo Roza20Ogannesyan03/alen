@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
+  </head>
+  <body>
+    <a href="#" class="icon scroll-arrow">
+      <svg
+        width="60"
+        height="60"
+        viewBox="0 0 60 60"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_564_583)">
+          <path
+            d="M29.6158 29.3791L23.1583 35.8545C22.9469 36.0666 22.9472 36.4101 23.1594 36.6219C23.3716 36.8336 23.7153 36.833 23.9269 36.6208L30 30.5309L36.0732 36.6211C36.2848 36.8332 36.6283 36.8338 36.8404 36.6221C36.9468 36.516 37 36.3769 37 36.2378C37 36.099 36.9472 35.9605 36.8415 35.8545L30.3842 29.3791C30.2825 29.2769 30.1442 29.2195 30 29.2195C29.8559 29.2195 29.7177 29.277 29.6158 29.3791Z"
+            fill="#454545"
+          />
+        </g>
+        <g clip-path="url(#clip1_564_583)">
+          <path
+            d="M29.6158 23.3791L23.1583 29.8545C22.9469 30.0666 22.9472 30.4101 23.1594 30.6219C23.3716 30.8336 23.7153 30.833 23.9269 30.6208L30 24.5309L36.0732 30.6211C36.2848 30.8332 36.6283 30.8338 36.8404 30.6221C36.9468 30.516 37 30.3769 37 30.2378C37 30.099 36.9472 29.9605 36.8415 29.8545L30.3842 23.3791C30.2825 23.2769 30.1442 23.2195 30 23.2195C29.8559 23.2195 29.7177 23.277 29.6158 23.3791Z"
+            fill="#454545"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_564_583">
+            <rect
+              width="14"
+              height="14"
+              fill="white"
+              transform="translate(23 40) rotate(-90)"
+            />
+          </clipPath>
+          <clipPath id="clip1_564_583">
+            <rect
+              width="14"
+              height="14"
+              fill="white"
+              transform="translate(23 34) rotate(-90)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+    </a>
+
+    <div class="popup" id="popup"></div>
+    <div class="close">
+      <div class="close__img">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.94367 27.9954C4.70304 27.9954 4.46004 27.9034 4.27602 27.7194C3.90799 27.3514 3.90799 26.7546 4.27602 26.3842L26.3863 4.27612C26.7544 3.90812 27.3536 3.90812 27.7216 4.27612C28.0897 4.64412 28.0897 5.24093 27.7216 5.61129L5.60896 27.7218C5.42495 27.9058 5.18431 27.9978 4.94132 27.9978L4.94367 27.9954Z"
+            fill="#DDDDDD"
+          />
+          <path
+            d="M27.054 27.9952C26.8133 27.9952 26.5703 27.9032 26.3863 27.7192L4.27602 5.60872C3.90799 5.24073 3.90799 4.64391 4.27602 4.27356C4.64406 3.90556 5.24329 3.90556 5.61132 4.27356L27.724 26.384C28.092 26.752 28.092 27.3489 27.724 27.7192C27.54 27.9032 27.2993 27.9952 27.0563 27.9952H27.054Z"
+            fill="#DDDDDD"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <div class="header-container">
+          <ul class="header__menu">
+            <a href=""><li class="header__menu_item">Главная</li></a>
+            <a href=""><li class="header__menu_item">О нас</li></a>
+            <a href=""><li class="header__menu_item">Деятельность</li></a>
+            <a href=""><li class="header__menu_item">Контакты</li></a>
+          </ul>
+          <div class="hamb__field" id="hamb">
+            <img src="images/menu.svg" alt="" />
+          </div>
+          <div class="header__logo-wrapper">
+            <a href="" class="logo-fon">
+              <img src="images/logo.png" alt="" class="logo" />
+            </a>
+          </div>
+          <div class="email">
+            <a href="mailto:info@a-len.su"
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.0769 6H3.9231C3.41537 6 3 6.41537 3 6.92306V17.0769C3 17.5846 3.41537 18 3.9231 18H20.0769C20.5846 18 21 17.5847 21 17.0769V6.92306C21 6.41537 20.5846 6 20.0769 6ZM19.7305 6.69226L12.531 12.0923C12.4016 12.1908 12.2029 12.2525 12 12.2516C11.7971 12.2525 11.5985 12.1908 11.469 12.0923L4.26946 6.69226H19.7305ZM15.8848 12.4486L19.8079 17.2948C19.8118 17.2997 19.8166 17.3034 19.8208 17.3078H4.17921C4.18336 17.3032 4.18821 17.2997 4.19215 17.2948L8.11524 12.4486C8.23544 12.3 8.21266 12.0822 8.06377 11.9617C7.91516 11.8415 7.6973 11.8643 7.57707 12.0129L3.6923 16.8118V7.12497L11.0538 12.6461C11.3305 12.8522 11.6672 12.9429 11.9999 12.9438C12.3322 12.9431 12.6692 12.8524 12.9461 12.6461L20.3076 7.12497V16.8117L16.4229 12.0129C16.3027 11.8643 16.0846 11.8415 15.9362 11.9617C15.7874 12.0819 15.7645 12.3 15.8848 12.4486Z"
+                  fill="#35251F"
+                />
+              </svg>
+            </a>
+            <a class="mail" href="mailto:info@a-len.su">info@a-len.su</a>
+          </div>
+          <div class="email">
+            <a href="tel:+74997695577"
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14 1.19995H10C9.77924 1.19995 9.60004 1.37915 9.60004 1.59994C9.60004 1.82072 9.77924 1.99992 10 1.99992H14C14.2208 1.99992 14.4 1.82072 14.4 1.59994C14.4 1.37915 14.2208 1.19995 14 1.19995Z"
+                  fill="#35251F"
+                />
+                <path
+                  d="M16.8 1.19995H16.4C16.1793 1.19995 16.0001 1.37915 16.0001 1.59994C16.0001 1.82072 16.1793 1.99992 16.4 1.99992H16.8C17.0208 1.99992 17.2 1.82072 17.2 1.59994C17.2 1.37915 17.0208 1.19995 16.8 1.19995Z"
+                  fill="#35251F"
+                />
+                <path
+                  d="M12.4968 20.4H11.5036C10.8952 20.4 10.4 20.8952 10.4 21.5036V21.6968C10.4 22.3052 10.8952 22.8 11.5032 22.8H12.4964C13.1048 22.8 13.6 22.3052 13.6 21.6968V21.5036C13.6 20.8952 13.1048 20.4 12.4968 20.4ZM12.8 21.6968C12.8 21.864 12.664 22 12.4968 22H11.5036C11.336 22 11.2 21.864 11.2 21.6968V21.5036C11.2 21.336 11.336 21.2 11.5036 21.2H12.4964C12.664 21.2 12.8 21.336 12.8 21.5036V21.6968Z"
+                  fill="#35251F"
+                />
+                <path
+                  d="M17.3544 0H6.64601C5.84881 0 5.20001 0.648797 5.20001 1.446V22.554C5.20001 23.3512 5.84881 24 6.64601 24H17.354C18.1512 24 18.8 23.3512 18.8 22.5544V1.446C18.8 0.648797 18.1512 0 17.3544 0ZM18 22.554C18 22.91 17.7104 23.2 17.3544 23.2H6.64601C6.28962 23.2 6.00003 22.91 6.00003 22.5544V1.446C6.00003 1.08998 6.28962 0.800016 6.64601 0.800016H17.354C17.7104 0.800016 18 1.09003 18 1.446V22.554H18Z"
+                  fill="#35251F"
+                />
+                <path
+                  d="M18.4 2.40002H5.60003C5.37925 2.40002 5.20004 2.57923 5.20004 2.80001V19.6C5.20004 19.8208 5.37925 20 5.60003 20H18.4C18.6208 20 18.8 19.8208 18.8 19.6V2.80001C18.8 2.57923 18.6208 2.40002 18.4 2.40002ZM18 19.2H6.00001V3.20004H18V19.2Z"
+                  fill="#35251F"
+                />
+              </svg>
+            </a>
+            <a class="phone" href="tel:+74997695577">+7 (499) 769 -55-77</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="slider">
+          <div class="swiper" id="slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div
+                class="swiper-slide slider__slide"
+                style="background-image: url('images/photo.png')"
+              >
+                <div class="slide__content">
+                  <div class="slide__title">
+                    Республиканский центр правовой поддержки «Аттикус»
+                  </div>
+                  <div class="slide__subtitle">
+                    Негосударственный центр оказания бесплатной юридической
+                    помощи Республики Северная Осетия-Алания
+                  </div>
+                  <div class="button button-blue">
+                    <p class="button__text">узнать Подробнее</p>
+                    <svg
+                      width="18"
+                      height="18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#a)" fill="#fff">
+                        <path
+                          d="M9 18c-4.963 0-9-4.037-9-9s4.037-9 9-9 9 4.037 9 9-4.037 9-9 9ZM9 1.125C4.658 1.125 1.125 4.658 1.125 9c0 4.342 3.533 7.875 7.875 7.875 4.342 0 7.875-3.533 7.875-7.875 0-4.342-3.533-7.875-7.875-7.875Z"
+                        />
+                        <path
+                          d="M12.938 9.563H5.061a.563.563 0 0 1 0-1.126h7.875a.563.563 0 0 1 0 1.126Z"
+                        />
+                        <path
+                          d="M9 13.5a.563.563 0 0 1-.563-.563V5.064a.563.563 0 0 1 1.126 0v7.875c0 .31-.253.562-.563.562Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M0 0h18v18H0z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="swiper-slide slider__slide"
+                style="background-image: url('images/photo.png')"
+              >
+                <div class="slide__content">
+                  <div class="slide__title">
+                    Республиканский центр правовой поддержки «Аттикус»
+                  </div>
+                  <div class="slide__subtitle">
+                    Негосударственный центр оказания бесплатной юридической
+                    помощи Республики Северная Осетия-Алания
+                  </div>
+                  <div class="button button-blue">
+                    <p class="button__text">узнать Подробнее</p>
+                    <svg
+                      width="18"
+                      height="18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#a)" fill="#fff">
+                        <path
+                          d="M9 18c-4.963 0-9-4.037-9-9s4.037-9 9-9 9 4.037 9 9-4.037 9-9 9ZM9 1.125C4.658 1.125 1.125 4.658 1.125 9c0 4.342 3.533 7.875 7.875 7.875 4.342 0 7.875-3.533 7.875-7.875 0-4.342-3.533-7.875-7.875-7.875Z"
+                        />
+                        <path
+                          d="M12.938 9.563H5.061a.563.563 0 0 1 0-1.126h7.875a.563.563 0 0 1 0 1.126Z"
+                        />
+                        <path
+                          d="M9 13.5a.563.563 0 0 1-.563-.563V5.064a.563.563 0 0 1 1.126 0v7.875c0 .31-.253.562-.563.562Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M0 0h18v18H0z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="swiper-slide slider__slide"
+                style="background-image: url('images/photo.png')"
+              >
+                <div class="slide__content">
+                  <div class="slide__title">
+                    Республиканский центр правовой поддержки «Аттикус»
+                  </div>
+                  <div class="slide__subtitle">
+                    Негосударственный центр оказания бесплатной юридической
+                    помощи Республики Северная Осетия-Алания
+                  </div>
+                  <div class="button button-blue">
+                    <p class="button__text">узнать Подробнее</p>
+                    <svg
+                      width="18"
+                      height="18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#a)" fill="#fff">
+                        <path
+                          d="M9 18c-4.963 0-9-4.037-9-9s4.037-9 9-9 9 4.037 9 9-4.037 9-9 9ZM9 1.125C4.658 1.125 1.125 4.658 1.125 9c0 4.342 3.533 7.875 7.875 7.875 4.342 0 7.875-3.533 7.875-7.875 0-4.342-3.533-7.875-7.875-7.875Z"
+                        />
+                        <path
+                          d="M12.938 9.563H5.061a.563.563 0 0 1 0-1.126h7.875a.563.563 0 0 1 0 1.126Z"
+                        />
+                        <path
+                          d="M9 13.5a.563.563 0 0 1-.563-.563V5.064a.563.563 0 0 1 1.126 0v7.875c0 .31-.253.562-.563.562Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M0 0h18v18H0z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="slider__swiper-button-prev">
+              <img class="arrow-img" src="images/right.svg" alt="" />
+            </div>
+            <div class="slider__swiper-button-next">
+              <img class="arrow-img" src="images/left.svg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="activity">
+          <div class="title-container">
+            <img src="images/mini-logo.png" class="mini-logo" alt="" />
+            <div class="title">Направление деятельности</div>
+          </div>
+
+          <div class="services">
+            <div class="services__item">
+              <div class="number">01</div>
+              <div class="services__text">
+                оказание бесплатной юридической помощи
+              </div>
+              <div class="button button-white">
+                <p class="button__text">узнать Подробнее</p>
+                <svg
+                  width="18"
+                  height="18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#a)" fill="#fff">
+                    <path
+                      d="M9 18c-4.963 0-9-4.037-9-9s4.037-9 9-9 9 4.037 9 9-4.037 9-9 9ZM9 1.125C4.658 1.125 1.125 4.658 1.125 9c0 4.342 3.533 7.875 7.875 7.875 4.342 0 7.875-3.533 7.875-7.875 0-4.342-3.533-7.875-7.875-7.875Z"
+                    />
+                    <path
+                      d="M12.938 9.563H5.061a.563.563 0 0 1 0-1.126h7.875a.563.563 0 0 1 0 1.126Z"
+                    />
+                    <path
+                      d="M9 13.5a.563.563 0 0 1-.563-.563V5.064a.563.563 0 0 1 1.126 0v7.875c0 .31-.253.562-.563.562Z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="a">
+                      <path fill="#fff" d="M0 0h18v18H0z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+
+            <div class="services__item">
+              <div class="number">02</div>
+              <div class="services__text">
+                оказание бесплатной юридической помощи
+              </div>
+              <div class="button button-blue">
+                <p class="button__text">узнать Подробнее</p>
+                <svg
+                  width="18"
+                  height="18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#a)" fill="#fff">
+                    <path
+                      d="M9 18c-4.963 0-9-4.037-9-9s4.037-9 9-9 9 4.037 9 9-4.037 9-9 9ZM9 1.125C4.658 1.125 1.125 4.658 1.125 9c0 4.342 3.533 7.875 7.875 7.875 4.342 0 7.875-3.533 7.875-7.875 0-4.342-3.533-7.875-7.875-7.875Z"
+                    />
+                    <path
+                      d="M12.938 9.563H5.061a.563.563 0 0 1 0-1.126h7.875a.563.563 0 0 1 0 1.126Z"
+                    />
+                    <path
+                      d="M9 13.5a.563.563 0 0 1-.563-.563V5.064a.563.563 0 0 1 1.126 0v7.875c0 .31-.253.562-.563.562Z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="a">
+                      <path fill="#fff" d="M0 0h18v18H0z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+
+            <div class="services__item">
+              <div class="number">03</div>
+              <div class="services__text">
+                оказание бесплатной юридической помощи
+              </div>
+              <div class="button button-white">
+                <p class="button__text">узнать Подробнее</p>
+                <svg
+                  width="18"
+                  height="18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#a)" fill="#fff">
+                    <path
+                      d="M9 18c-4.963 0-9-4.037-9-9s4.037-9 9-9 9 4.037 9 9-4.037 9-9 9ZM9 1.125C4.658 1.125 1.125 4.658 1.125 9c0 4.342 3.533 7.875 7.875 7.875 4.342 0 7.875-3.533 7.875-7.875 0-4.342-3.533-7.875-7.875-7.875Z"
+                    />
+                    <path
+                      d="M12.938 9.563H5.061a.563.563 0 0 1 0-1.126h7.875a.563.563 0 0 1 0 1.126Z"
+                    />
+                    <path
+                      d="M9 13.5a.563.563 0 0 1-.563-.563V5.064a.563.563 0 0 1 1.126 0v7.875c0 .31-.253.562-.563.562Z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="a">
+                      <path fill="#fff" d="M0 0h18v18H0z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="centre">
+        <div class="map">
+          <script
+            type="text/javascript"
+            charset="utf-8"
+            async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad01543cb7354e0d9fd5f4e96b2eb907bf395522868fbc334e97b6a6de29c030e&amp;width=800&amp;height=590&amp;lang=ru_RU&amp;scroll=true"
+          ></script>
+        </div>
+        <div class="support">
+          <p class="support__title">При поддержке</p>
+          <p class="support__text">фонда президентских грантов</p>
+        </div>
+        <div class="content">
+          <div class="title">О нашем центре</div>
+          <p>
+            Автономная некоммерческая организация «Республиканский центр
+            правовой поддержки «Аттикус» (далее - Центр «Аттикус) представляет
+            собой негосударственный центр оказания бесплатной юридической
+            помощи, преимущественно оказывающий бесплатную правовую помощь
+            социально незащищенным категориям граждан (лиц, которые в силу
+            возраста, состояния здоровья, сложных жизненных обстоятельств
+            нуждаются в поддержке и защите).
+
+            <br /><br />
+
+            Кроме того, Центр «Аттикус» является одной из инновационных площадок
+            реализации современных образовательных технологий, обеспечивающих
+            программу непосредственного сочетания теоретического и практического
+            обучения студентов-юристов и прохождения ими практики, а также
+            содействия их последующему трудоустройству по специальности.
+          </p>
+          <a href="" class="more"
+            ><p class="button__text">узнать Подробнее</p>
+            <svg
+              width="18"
+              height="18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#a)" fill="#fff">
+                <path
+                  d="M9 18c-4.963 0-9-4.037-9-9s4.037-9 9-9 9 4.037 9 9-4.037 9-9 9ZM9 1.125C4.658 1.125 1.125 4.658 1.125 9c0 4.342 3.533 7.875 7.875 7.875 4.342 0 7.875-3.533 7.875-7.875 0-4.342-3.533-7.875-7.875-7.875Z"
+                />
+                <path
+                  d="M12.938 9.563H5.061a.563.563 0 0 1 0-1.126h7.875a.563.563 0 0 1 0 1.126Z"
+                />
+                <path
+                  d="M9 13.5a.563.563 0 0 1-.563-.563V5.064a.563.563 0 0 1 1.126 0v7.875c0 .31-.253.562-.563.562Z"
+                />
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h18v18H0z" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="container">
+        <form action="" class="form">
+          <div class="form__title">Форма обратной связи</div>
+          <div class="form__subtitle">
+            Мы ответим на все интересующие вопросы!
+          </div>
+          <div class="inputs">
+            <div class="name_email">
+              <input
+                type="text"
+                name="name"
+                class="input"
+                placeholder="Ваше имя"
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="input"
+                placeholder="Ваш телефон"
+              />
+            </div>
+            <textarea
+              name="message"
+              id="message"
+              class="message"
+              placeholder="Сообщение"
+            ></textarea>
+          </div>
+          <div class="politika">
+            <p class="agreement">
+              Нажимая на кнопку, вы даёте согласие на обработку персональных
+              данных.
+            </p>
+            <div class="button button-blue">
+              <p class="button__text">Отправить заявку</p>
+              <svg
+                width="18"
+                height="18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#a)" fill="#fff">
+                  <path
+                    d="M9 18c-4.963 0-9-4.037-9-9s4.037-9 9-9 9 4.037 9 9-4.037 9-9 9ZM9 1.125C4.658 1.125 1.125 4.658 1.125 9c0 4.342 3.533 7.875 7.875 7.875 4.342 0 7.875-3.533 7.875-7.875 0-4.342-3.533-7.875-7.875-7.875Z"
+                  />
+                  <path
+                    d="M12.938 9.563H5.061a.563.563 0 0 1 0-1.126h7.875a.563.563 0 0 1 0 1.126Z"
+                  />
+                  <path
+                    d="M9 13.5a.563.563 0 0 1-.563-.563V5.064a.563.563 0 0 1 1.126 0v7.875c0 .31-.253.562-.563.562Z"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="a">
+                    <path fill="#fff" d="M0 0h18v18H0z" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          <img class="ptichka" src="images/ptichka.png" alt="" />
+        </form>
+
+        <div class="answers-wrapper">
+          <div class="title-container">
+            <img src="images/mini-logo.png" class="mini-logo" alt="" />
+            <div class="title">Вопрос-ответ</div>
+          </div>
+
+          <div class="answers">
+            <div class="answers__item">
+              <div class="answers__item_number">01</div>
+              <div class="answers__item_content">
+                <div class="answers__item_title">
+                  Кто может оформить лизинг?
+                </div>
+                <p class="answers__item_description">
+                  Юридическое лицо или Индивидуальный предприниматель, чей
+                  бизнес работает более 5 месяцев. Юридическое лицо или
+                  Индивидуальный предприниматель, чей бизнес работает более 5
+                  месяцев. Юридическое лицо или Индивидуальный предприниматель,
+                  чей бизнес работает более 5 месяцев. Юридическое лицо или
+                  Индивидуальный предприниматель, чей бизнес работает более 5
+                  месяцев.
+                </p>
+              </div>
+              <div class="answers__item_plus">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.7"
+                    d="M16 8.71198H8.88802V16H7.11198V8.71198H0V7.28802H7.11198V0H8.88802V7.28802H16V8.71198Z"
+                    fill="#282938"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="answers__item">
+              <div class="answers__item_number">01</div>
+              <div class="answers__item_content">
+                <div class="answers__item_title">
+                  Кто может оформить лизинг?
+                </div>
+                <p class="answers__item_description">
+                  Юридическое лицо или Индивидуальный предприниматель, чей
+                  бизнес работает более 5 месяцев.
+                </p>
+              </div>
+              <div class="answers__item_plus">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.7"
+                    d="M16 8.71198H8.88802V16H7.11198V8.71198H0V7.28802H7.11198V0H8.88802V7.28802H16V8.71198Z"
+                    fill="#282938"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="answers__item">
+              <div class="answers__item_number">01</div>
+              <div class="answers__item_content">
+                <div class="answers__item_title">
+                  Кто может оформить лизинг?
+                </div>
+                <p class="answers__item_description">
+                  Юридическое лицо или Индивидуальный предприниматель, чей
+                  бизнес работает более 5 месяцев.
+                </p>
+              </div>
+              <div class="answers__item_plus">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.7"
+                    d="M16 8.71198H8.88802V16H7.11198V8.71198H0V7.28802H7.11198V0H8.88802V7.28802H16V8.71198Z"
+                    fill="#282938"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="answers__item">
+              <div class="answers__item_number">01</div>
+              <div class="answers__item_content">
+                <div class="answers__item_title">
+                  Кто может оформить лизинг?
+                </div>
+                <p class="answers__item_description">
+                  Юридическое лицо или Индивидуальный предприниматель, чей
+                  бизнес работает более 5 месяцев.
+                </p>
+              </div>
+              <div class="answers__item_plus">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.7"
+                    d="M16 8.71198H8.88802V16H7.11198V8.71198H0V7.28802H7.11198V0H8.88802V7.28802H16V8.71198Z"
+                    fill="#282938"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-container">
+          <img class="footer__logo" src="images/logo.png" alt="" />
+          <ul class="footer__menu">
+            <a href=""><li class="footer__menu_item">Главная</li></a
+            ><a href=""><li class="footer__menu_item">О нас</li></a
+            ><a href=""><li class="footer__menu_item">Наши услуги</li></a
+            ><a href=""
+              ><li class="footer__menu_item">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСИ</li></a
+            ><a href=""><li class="footer__menu_item">Контакты</li></a>
+          </ul>
+
+          <div class="footer__menu-bottom">
+            <div class="rights">
+              <p class="rights__protect">© 2021.Все права защищены.</p>
+              <p>Разработка сайта</p>
+            </div>
+            <div class="email address-wr">
+              <img src="images/gps.svg" alt="" />
+              <div class="address">г. Владикавказ, ул. Шмулевича 8б</div>
+            </div>
+            <div class="email">
+              <a href="mailto:info@a-len.su"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.0769 6H3.9231C3.41537 6 3 6.41537 3 6.92306V17.0769C3 17.5846 3.41537 18 3.9231 18H20.0769C20.5846 18 21 17.5847 21 17.0769V6.92306C21 6.41537 20.5846 6 20.0769 6ZM19.7305 6.69226L12.531 12.0923C12.4016 12.1908 12.2029 12.2525 12 12.2516C11.7971 12.2525 11.5985 12.1908 11.469 12.0923L4.26946 6.69226H19.7305ZM15.8848 12.4486L19.8079 17.2948C19.8118 17.2997 19.8166 17.3034 19.8208 17.3078H4.17921C4.18336 17.3032 4.18821 17.2997 4.19215 17.2948L8.11524 12.4486C8.23544 12.3 8.21266 12.0822 8.06377 11.9617C7.91516 11.8415 7.6973 11.8643 7.57707 12.0129L3.6923 16.8118V7.12497L11.0538 12.6461C11.3305 12.8522 11.6672 12.9429 11.9999 12.9438C12.3322 12.9431 12.6692 12.8524 12.9461 12.6461L20.3076 7.12497V16.8117L16.4229 12.0129C16.3027 11.8643 16.0846 11.8415 15.9362 11.9617C15.7874 12.0819 15.7645 12.3 15.8848 12.4486Z"
+                    fill="#35251F"
+                  />
+                </svg>
+              </a>
+              <a class="mail" href="mailto:info@a-len.su">info@a-len.su</a>
+            </div>
+            <div class="email">
+              <a href="tel:+74997695577"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14 1.19995H10C9.77924 1.19995 9.60004 1.37915 9.60004 1.59994C9.60004 1.82072 9.77924 1.99992 10 1.99992H14C14.2208 1.99992 14.4 1.82072 14.4 1.59994C14.4 1.37915 14.2208 1.19995 14 1.19995Z"
+                    fill="#35251F"
+                  />
+                  <path
+                    d="M16.8 1.19995H16.4C16.1793 1.19995 16.0001 1.37915 16.0001 1.59994C16.0001 1.82072 16.1793 1.99992 16.4 1.99992H16.8C17.0208 1.99992 17.2 1.82072 17.2 1.59994C17.2 1.37915 17.0208 1.19995 16.8 1.19995Z"
+                    fill="#35251F"
+                  />
+                  <path
+                    d="M12.4968 20.4H11.5036C10.8952 20.4 10.4 20.8952 10.4 21.5036V21.6968C10.4 22.3052 10.8952 22.8 11.5032 22.8H12.4964C13.1048 22.8 13.6 22.3052 13.6 21.6968V21.5036C13.6 20.8952 13.1048 20.4 12.4968 20.4ZM12.8 21.6968C12.8 21.864 12.664 22 12.4968 22H11.5036C11.336 22 11.2 21.864 11.2 21.6968V21.5036C11.2 21.336 11.336 21.2 11.5036 21.2H12.4964C12.664 21.2 12.8 21.336 12.8 21.5036V21.6968Z"
+                    fill="#35251F"
+                  />
+                  <path
+                    d="M17.3544 0H6.64601C5.84881 0 5.20001 0.648797 5.20001 1.446V22.554C5.20001 23.3512 5.84881 24 6.64601 24H17.354C18.1512 24 18.8 23.3512 18.8 22.5544V1.446C18.8 0.648797 18.1512 0 17.3544 0ZM18 22.554C18 22.91 17.7104 23.2 17.3544 23.2H6.64601C6.28962 23.2 6.00003 22.91 6.00003 22.5544V1.446C6.00003 1.08998 6.28962 0.800016 6.64601 0.800016H17.354C17.7104 0.800016 18 1.09003 18 1.446V22.554H18Z"
+                    fill="#35251F"
+                  />
+                  <path
+                    d="M18.4 2.40002H5.60003C5.37925 2.40002 5.20004 2.57923 5.20004 2.80001V19.6C5.20004 19.8208 5.37925 20 5.60003 20H18.4C18.6208 20 18.8 19.8208 18.8 19.6V2.80001C18.8 2.57923 18.6208 2.40002 18.4 2.40002ZM18 19.2H6.00001V3.20004H18V19.2Z"
+                    fill="#35251F"
+                  />
+                </svg>
+              </a>
+              <a class="phone" href="tel:+74997695577">+7 (499) 769 -55-77</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
